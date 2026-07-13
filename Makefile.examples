@@ -127,6 +127,7 @@ $(foreach bw,64 32,$(eval $(call add_curve_keys,p224k1_$(bw),WORD_BY_WORD_MONTGO
 $(foreach bw,64 32,$(eval $(call add_curve_keys,p224_$(bw),WORD_BY_WORD_MONTGOMERY,'p224',$(bw),'2^224 - 2^96 + 1',$(WORD_BY_WORD_MONTGOMERY_FUNCTIONS),WORD_BY_WORD_MONTGOMERY)))
 $(foreach bw,64,$(eval $(call add_curve_keys,p434_$(bw),WORD_BY_WORD_MONTGOMERY,'p434',$(bw),'2^216 * 3^137 - 1',$(WORD_BY_WORD_MONTGOMERY_FUNCTIONS),WORD_BY_WORD_MONTGOMERY))) # 32 is a bit too heavy
 $(foreach bw,64 32,$(eval $(call add_curve_keys,sm2_$(bw),WORD_BY_WORD_MONTGOMERY,'sm2',$(bw),'2^256 - 2^224 - 2^96 + 2^64 - 1',$(WORD_BY_WORD_MONTGOMERY_FUNCTIONS),WORD_BY_WORD_MONTGOMERY)))
+$(foreach bw,64 32,$(eval $(call add_curve_keys,bls12_381_$(bw),WORD_BY_WORD_MONTGOMERY,'bls12_381',$(bw),'0x1a0111ea397fe69a4b1ba7b6434bacd764774b84f38512bf6730d2a0f6b0f6241eabfffeb153ffffb9feffffffffaaab',$(WORD_BY_WORD_MONTGOMERY_FUNCTIONS),WORD_BY_WORD_MONTGOMERY)))
 
 $(foreach bw,64 32,$(eval $(call add_curve_keys,curve25519_scalar_$(bw),WORD_BY_WORD_MONTGOMERY,'25519_scalar',$(bw),'2^252 + 27742317777372353535851937790883648493',$(WORD_BY_WORD_MONTGOMERY_FUNCTIONS),WORD_BY_WORD_MONTGOMERY)))
 $(foreach bw,64 32,$(eval $(call add_curve_keys,p192r1_scalar_$(bw),WORD_BY_WORD_MONTGOMERY,'p192r1_scalar',$(bw),'2^192 - 31607402335160671281192228815',$(WORD_BY_WORD_MONTGOMERY_FUNCTIONS),WORD_BY_WORD_MONTGOMERY)))
@@ -138,6 +139,7 @@ $(foreach bw,64 32,$(eval $(call add_curve_keys,p384_scalar_$(bw),WORD_BY_WORD_M
 $(foreach bw,64 32,$(eval $(call add_curve_keys,p521_scalar_$(bw),WORD_BY_WORD_MONTGOMERY,'p521_scalar',$(bw),'2^521 - 657877501894328237357444332315020117536923257219387276263472201219398408051703',$(WORD_BY_WORD_MONTGOMERY_FUNCTIONS),WORD_BY_WORD_MONTGOMERY)))
 $(foreach bw,64 32,$(eval $(call add_curve_keys,secp256k1_montgomery_scalar_$(bw),WORD_BY_WORD_MONTGOMERY,'secp256k1_montgomery_scalar',$(bw),'2^256 - 432420386565659656852420866394968145599',$(WORD_BY_WORD_MONTGOMERY_FUNCTIONS),WORD_BY_WORD_MONTGOMERY)))
 $(foreach bw,64 32,$(eval $(call add_curve_keys,sm2_scalar_$(bw),WORD_BY_WORD_MONTGOMERY,'sm2_scalar',$(bw),'2^256 - 2^224 - 188730267045675049073202170516080344797',$(WORD_BY_WORD_MONTGOMERY_FUNCTIONS),WORD_BY_WORD_MONTGOMERY)))
+$(foreach bw,64 32,$(eval $(call add_curve_keys,bls12_381_scalar_$(bw),WORD_BY_WORD_MONTGOMERY,'bls12_381_scalar',$(bw),'0x73eda753299d7d483339d80809a1d80553bda402fffe5bfeffffffff00000001',$(WORD_BY_WORD_MONTGOMERY_FUNCTIONS),WORD_BY_WORD_MONTGOMERY)))
 
 $(foreach bw,64,$(eval $(call add_curve_keys,secp256k1_dettman_$(bw),DETTMAN_MULTIPLICATION,'secp256k1_dettman',$(bw),5 48 2 '2^256 - 4294968273',$(DETTMAN_MULTIPLICATION_FUNCTIONS),DETTMAN_MULTIPLICATION)))
 $(foreach bw,32,$(eval $(call add_curve_keys,secp256k1_dettman_$(bw),DETTMAN_MULTIPLICATION,'secp256k1_dettman',$(bw),10 22 6 '2^256 - 4294968273',$(DETTMAN_MULTIPLICATION_FUNCTIONS),DETTMAN_MULTIPLICATION)))
